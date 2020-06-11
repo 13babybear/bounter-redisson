@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 public @interface DistLock {
 
     /**
-     * 自定义key
+     * 自定义key,支持SpEL表达式
      * @return
      */
     String key() default "distlock";
