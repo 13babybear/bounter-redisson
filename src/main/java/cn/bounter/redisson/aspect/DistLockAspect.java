@@ -90,6 +90,7 @@ public class DistLockAspect {
              method(Student student)
              那么就可以解析出方法形参的某属性值，return “xiaoming”;
           */
-        return prefix + expression.getValue(context).toString();
+        Object value = expression.getValue(context);
+        return value == null ? "distlock" : prefix + value.toString();
     }
 }
